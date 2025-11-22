@@ -144,7 +144,7 @@ const setupTextHover = (
   container: HTMLElement | null,
   type: FontWeightType
 ): (() => void) | undefined => {
-  if (!container) return;
+  if (!container) return ()=>{};
   
   const letters = container.querySelectorAll<HTMLSpanElement>("span");
   const { min, max, default: base } = FONT_WEIGHTS[type];
@@ -214,7 +214,7 @@ const Welcome = () => {
         {renderText("Portfolio", "text-9xl italic font-semibold font-georama")}
       </h1>
 
-      <div className="small-screen">
+      <div className="small-screen sm:hidden">
         <p> This Portfolio is designed for desktop/tablet screens only</p>
       </div>
     </section>
