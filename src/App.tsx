@@ -4,6 +4,7 @@ import Welcome from "./components/Welcome";
 
 import { Draggable } from "gsap/Draggable";
 import TerminalWindow from './windows/Terminal';
+import gsap from "gsap";
 gsap.registerPlugin(Draggable);
 
 const App = () => {
